@@ -59,6 +59,7 @@ const Hero = () => {
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                     className="w-full h-full object-cover"
                   >
                     <source src="/ScreenRecording_11-07-2025_13-31-25_1.mov" type="video/quicktime" />

@@ -14,7 +14,7 @@ const AppStoreBadge = ({ className = '', href = "https://apps.apple.com/us/app/h
       onMouseLeave={() => setShowConfetti(false)}
       style={{ position: 'relative', overflow: 'visible' }}
     >
-      <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl">
+      <button className="bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl">
         Get
       </button>
       <Confetti trigger={showConfetti} />

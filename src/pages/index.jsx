@@ -1,8 +1,8 @@
 import Navbar from '../components/Navbar'
 import Hero from '../sections/Hero'
+import HowToSave from '../sections/HowToSave'
 import Problem from '../sections/Problem'
 import Features from '../sections/Features'
-import HowItWorks from '../sections/HowItWorks'
 import AIAnalysis from '../sections/AIAnalysis'
 import ShareFrom from '../sections/ShareFrom'
 import TeamCollaboration from '../sections/TeamCollaboration'
@@ -15,10 +15,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <HowToSave />
       <Problem />
-      <Features />
-      <HowItWorks />
       <AIAnalysis />
+      <Features />
       <ShareFrom />
       <AnimatedArrow />
       <TeamCollaboration />

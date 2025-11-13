@@ -188,16 +188,38 @@
     animation: fade-in 0.8s ease-out;
   }
 
-  /* Premium Gradient Text Effect */
-  .premium-gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+  /* Premium Electric Neon Gradient Text Effect - Fixed */
+  .premium-neon-gradient {
+    background: linear-gradient(90deg, #8b5cf6 0%, #6366f1 25%, #a855f7 50%, #3b82f6 75%, #8b5cf6 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    animation: premium-gradient-shift 3s ease infinite;
+    animation: premium-gradient-shift 4s ease infinite;
     filter: brightness(1.1);
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+  }
+
+  .premium-neon-gradient::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #8b5cf6 0%, #6366f1 25%, #a855f7 50%, #3b82f6 75%, #8b5cf6 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(6px) brightness(1.15);
+    opacity: 0.5;
+    z-index: -1;
+    animation: premium-gradient-shift 4s ease infinite;
+    pointer-events: none;
   }
 
   @keyframes premium-gradient-shift {
@@ -209,47 +231,84 @@
     }
   }
 
-  /* Floating Card Animations */
-  @keyframes float-card-1 {
+
+  /* Subtle Floating Card Animations - 1-2px only */
+  @keyframes float-card-subtle-1 {
     0%, 100% {
-      transform: translateY(0px) translateX(0px);
+      transform: translateY(0px);
     }
     50% {
-      transform: translateY(-8px) translateX(4px);
+      transform: translateY(-1.5px);
     }
   }
 
-  @keyframes float-card-2 {
+  @keyframes float-card-subtle-2 {
     0%, 100% {
-      transform: translateY(0px) translateX(0px);
+      transform: translateY(0px);
     }
     50% {
-      transform: translateY(-6px) translateX(-4px);
+      transform: translateY(-1px);
     }
   }
 
-  @keyframes float-card-3 {
+  @keyframes float-card-subtle-3 {
     0%, 100% {
-      transform: translateY(0px) translateX(0px);
+      transform: translateY(0px);
     }
     50% {
-      transform: translateY(-10px) translateX(6px);
+      transform: translateY(-2px);
     }
   }
 
-  .animate-float-card-1 {
-    animation: float-card-1 4s ease-in-out infinite;
+  .animate-float-card-subtle-1 {
+    animation: float-card-subtle-1 5s ease-in-out infinite;
     animation-delay: 0s;
   }
 
-  .animate-float-card-2 {
-    animation: float-card-2 4.5s ease-in-out infinite;
+  .animate-float-card-subtle-2 {
+    animation: float-card-subtle-2 5.5s ease-in-out infinite;
     animation-delay: 0.5s;
   }
 
-  .animate-float-card-3 {
-    animation: float-card-3 5s ease-in-out infinite;
+  .animate-float-card-subtle-3 {
+    animation: float-card-subtle-3 6s ease-in-out infinite;
     animation-delay: 1s;
+  }
+
+  /* Premium Card Shadow */
+  .shadow-card-premium {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Premium Phone Shadow */
+  .shadow-phone-premium {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Step Card Gradient Border */
+  .step-card-border {
+    position: relative;
+    border: 1px solid rgba(139, 92, 246, 0.1);
+  }
+  
+  .step-card-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(59, 130, 246, 0.08));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Radial Gradient Utility */
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
   }
   
   .sparkle-button {

@@ -172,6 +172,85 @@
     animation: float-up-3 2.5s ease-in-out infinite;
     animation-delay: 1s;
   }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+
+  /* Premium Gradient Text Effect */
+  .premium-gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: premium-gradient-shift 3s ease infinite;
+    filter: brightness(1.1);
+  }
+
+  @keyframes premium-gradient-shift {
+    0%, 100% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+  }
+
+  /* Floating Card Animations */
+  @keyframes float-card-1 {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    50% {
+      transform: translateY(-8px) translateX(4px);
+    }
+  }
+
+  @keyframes float-card-2 {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    50% {
+      transform: translateY(-6px) translateX(-4px);
+    }
+  }
+
+  @keyframes float-card-3 {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    50% {
+      transform: translateY(-10px) translateX(6px);
+    }
+  }
+
+  .animate-float-card-1 {
+    animation: float-card-1 4s ease-in-out infinite;
+    animation-delay: 0s;
+  }
+
+  .animate-float-card-2 {
+    animation: float-card-2 4.5s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  .animate-float-card-3 {
+    animation: float-card-3 5s ease-in-out infinite;
+    animation-delay: 1s;
+  }
   
   .sparkle-button {
     position: relative;

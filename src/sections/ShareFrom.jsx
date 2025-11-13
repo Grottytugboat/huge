@@ -1,13 +1,8 @@
 import { Link } from 'react-router-dom'
 
 const ShareFrom = () => {
-  // Top row platforms
+  // All supported platforms based on actual support
   const platformsTop = [
-    { 
-      name: "Instagram", 
-      logo: "https://cdn.simpleicons.org/instagram/E4405F",
-      color: "bg-pink-50"
-    },
     { 
       name: "YouTube", 
       logo: "https://cdn.simpleicons.org/youtube/FF0000",
@@ -19,13 +14,23 @@ const ShareFrom = () => {
       color: "bg-gray-50"
     },
     { 
-      name: "Facebook", 
-      logo: "https://cdn.simpleicons.org/facebook/1877F2",
-      color: "bg-blue-50"
+      name: "Instagram", 
+      logo: "https://cdn.simpleicons.org/instagram/E4405F",
+      color: "bg-pink-50"
     },
     { 
-      name: "LinkedIn", 
-      logo: "/linkedin-icon.png",
+      name: "Twitter/X", 
+      logo: "https://cdn.simpleicons.org/x/000000",
+      color: "bg-gray-50"
+    },
+    { 
+      name: "Reddit", 
+      logo: "https://cdn.simpleicons.org/reddit/FF4500",
+      color: "bg-orange-50"
+    },
+    { 
+      name: "Facebook", 
+      logo: "https://cdn.simpleicons.org/facebook/1877F2",
       color: "bg-blue-50"
     },
     { 
@@ -34,18 +39,13 @@ const ShareFrom = () => {
       color: "bg-purple-50"
     },
     { 
-      name: "Snapchat", 
-      logo: "https://cdn.simpleicons.org/snapchat/FFFC00",
-      color: "bg-yellow-50"
+      name: "Bilibili", 
+      logo: "https://cdn.simpleicons.org/bilibili/00A1D6",
+      color: "bg-blue-50"
     },
     { 
-      name: "Pinterest", 
-      logo: "https://cdn.simpleicons.org/pinterest/BD081C",
-      color: "bg-red-50"
-    },
-    { 
-      name: "Reddit", 
-      logo: "https://cdn.simpleicons.org/reddit/FF4500",
+      name: "SoundCloud", 
+      logo: "https://cdn.simpleicons.org/soundcloud/FF3300",
       color: "bg-orange-50"
     },
     { 
@@ -54,59 +54,49 @@ const ShareFrom = () => {
       color: "bg-blue-50"
     },
     { 
-      name: "YouTube Shorts", 
-      logo: "https://cdn.simpleicons.org/youtube/FF0000",
-      color: "bg-red-50"
-    },
-    { 
-      name: "Tumblr", 
-      logo: "https://cdn.simpleicons.org/tumblr/36465D",
-      color: "bg-gray-50"
-    },
-    { 
-      name: "VK", 
-      logo: "https://cdn.simpleicons.org/vk/0077FF",
-      color: "bg-blue-50"
-    }
-  ]
-
-  // Bottom row platforms (different set)
-  const platformsBottom = [
-    { 
-      name: "X (Twitter)", 
-      logo: "https://cdn.simpleicons.org/x/000000",
-      color: "bg-gray-50"
-    },
-    { 
-      name: "Threads", 
-      logo: "https://cdn.simpleicons.org/threads/000000",
-      color: "bg-gray-50"
-    },
-    { 
       name: "Dailymotion", 
       logo: "https://cdn.simpleicons.org/dailymotion/0066DC",
       color: "bg-blue-50"
     },
     { 
-      name: "WeChat", 
-      logo: "https://cdn.simpleicons.org/wechat/07C160",
+      name: "Rumble", 
+      logo: "https://cdn.simpleicons.org/rumble/85C742",
       color: "bg-green-50"
     },
     { 
-      name: "Weibo", 
-      logo: "https://cdn.simpleicons.org/sinaweibo/E6162D",
+      name: "Odysee", 
+      logo: "https://cdn.simpleicons.org/odysee/EF1970",
+      color: "bg-pink-50"
+    },
+    { 
+      name: "PeerTube", 
+      logo: "https://cdn.simpleicons.org/peertube/F1680D",
+      color: "bg-orange-50"
+    },
+    { 
+      name: "Kick", 
+      logo: "https://cdn.simpleicons.org/kick/53FC18",
+      color: "bg-green-50"
+    },
+    { 
+      name: "Patreon", 
+      logo: "https://cdn.simpleicons.org/patreon/FF424D",
       color: "bg-red-50"
     },
     { 
-      name: "Twitter", 
-      logo: "https://cdn.simpleicons.org/x/000000",
-      color: "bg-gray-50"
+      name: "OnlyFans", 
+      logo: "https://cdn.simpleicons.org/onlyfans/00AFF0",
+      color: "bg-blue-50"
     },
     { 
-      name: "Instagram", 
-      logo: "https://cdn.simpleicons.org/instagram/E4405F",
-      color: "bg-pink-50"
-    },
+      name: "Fansly", 
+      logo: "/fansly-icon.png",
+      color: "bg-blue-50"
+    }
+  ]
+
+  // Bottom row platforms (duplicate for smooth scrolling)
+  const platformsBottom = [
     { 
       name: "YouTube", 
       logo: "https://cdn.simpleicons.org/youtube/FF0000",
@@ -118,13 +108,23 @@ const ShareFrom = () => {
       color: "bg-gray-50"
     },
     { 
-      name: "Facebook", 
-      logo: "https://cdn.simpleicons.org/facebook/1877F2",
-      color: "bg-blue-50"
+      name: "Instagram", 
+      logo: "https://cdn.simpleicons.org/instagram/E4405F",
+      color: "bg-pink-50"
     },
     { 
-      name: "LinkedIn", 
-      logo: "/linkedin-icon.png",
+      name: "Twitter/X", 
+      logo: "https://cdn.simpleicons.org/x/000000",
+      color: "bg-gray-50"
+    },
+    { 
+      name: "Reddit", 
+      logo: "https://cdn.simpleicons.org/reddit/FF4500",
+      color: "bg-orange-50"
+    },
+    { 
+      name: "Facebook", 
+      logo: "https://cdn.simpleicons.org/facebook/1877F2",
       color: "bg-blue-50"
     },
     { 
@@ -133,19 +133,59 @@ const ShareFrom = () => {
       color: "bg-purple-50"
     },
     { 
-      name: "Snapchat", 
-      logo: "https://cdn.simpleicons.org/snapchat/FFFC00",
-      color: "bg-yellow-50"
+      name: "Bilibili", 
+      logo: "https://cdn.simpleicons.org/bilibili/00A1D6",
+      color: "bg-blue-50"
     },
     { 
-      name: "Pinterest", 
-      logo: "https://cdn.simpleicons.org/pinterest/BD081C",
+      name: "SoundCloud", 
+      logo: "https://cdn.simpleicons.org/soundcloud/FF3300",
+      color: "bg-orange-50"
+    },
+    { 
+      name: "Vimeo", 
+      logo: "https://cdn.simpleicons.org/vimeo/1AB7EA",
+      color: "bg-blue-50"
+    },
+    { 
+      name: "Dailymotion", 
+      logo: "https://cdn.simpleicons.org/dailymotion/0066DC",
+      color: "bg-blue-50"
+    },
+    { 
+      name: "Rumble", 
+      logo: "https://cdn.simpleicons.org/rumble/85C742",
+      color: "bg-green-50"
+    },
+    { 
+      name: "Odysee", 
+      logo: "https://cdn.simpleicons.org/odysee/EF1970",
+      color: "bg-pink-50"
+    },
+    { 
+      name: "PeerTube", 
+      logo: "https://cdn.simpleicons.org/peertube/F1680D",
+      color: "bg-orange-50"
+    },
+    { 
+      name: "Kick", 
+      logo: "https://cdn.simpleicons.org/kick/53FC18",
+      color: "bg-green-50"
+    },
+    { 
+      name: "Patreon", 
+      logo: "https://cdn.simpleicons.org/patreon/FF424D",
       color: "bg-red-50"
     },
     { 
-      name: "Reddit", 
-      logo: "https://cdn.simpleicons.org/reddit/FF4500",
-      color: "bg-orange-50"
+      name: "OnlyFans", 
+      logo: "https://cdn.simpleicons.org/onlyfans/00AFF0",
+      color: "bg-blue-50"
+    },
+    { 
+      name: "Fansly", 
+      logo: "/fansly-icon.png",
+      color: "bg-blue-50"
     }
   ]
 
@@ -171,25 +211,25 @@ const ShareFrom = () => {
             <div className="marquee-content-smooth">
               {[...platformsTop, ...platformsBottom, ...platformsTop, ...platformsBottom, ...platformsTop, ...platformsBottom].map((platform, index) => {
                 const slugMap = {
-                  'Instagram': 'instagram',
                   'YouTube': 'youtube',
                   'TikTok': 'tiktok',
-                  'Facebook': 'facebook',
+                  'Instagram': 'instagram',
+                  'Twitter/X': 'twitter',
                   'Twitter': 'twitter',
-                  'LinkedIn': 'linkedin',
-                  'Twitch': 'twitch',
-                  'X (Twitter)': 'twitter',
-                  'Snapchat': 'snapchat',
-                  'Pinterest': 'pinterest',
                   'Reddit': 'reddit',
+                  'Facebook': 'facebook',
+                  'Twitch': 'twitch',
+                  'Bilibili': 'bilibili',
+                  'SoundCloud': 'soundcloud',
                   'Vimeo': 'vimeo',
                   'Dailymotion': 'dailymotion',
-                  'Threads': 'threads',
-                  'YouTube Shorts': 'youtube-shorts',
-                  'Tumblr': 'tumblr',
-                  'VK': 'vk',
-                  'WeChat': 'wechat',
-                  'Weibo': 'weibo',
+                  'Rumble': 'rumble',
+                  'Odysee': 'odysee',
+                  'PeerTube': 'peertube',
+                  'Kick': 'kick',
+                  'Patreon': 'patreon',
+                  'OnlyFans': 'onlyfans',
+                  'Fansly': 'fansly',
                   'Any Platform': 'any-platform'
                 }
                 

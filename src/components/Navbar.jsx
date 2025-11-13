@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Button from './Button'
+import AppStoreBadge from './AppStoreBadge'
 
 const Navbar = () => {
   return (
@@ -13,15 +13,7 @@ const Navbar = () => {
               className="h-16 md:h-24 lg:h-28 w-auto"
             />
           </Link>
-          <a 
-            href="https://apps.apple.com/us/app/huge/id6754827936" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <Button variant="primary" className="text-sm px-6 py-2.5">
-              Download
-            </Button>
-          </a>
+          <AppStoreBadge className="h-10 md:h-12" />
         </div>
       </div>
     </nav>

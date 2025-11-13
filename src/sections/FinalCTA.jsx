@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Button from '../components/Button'
+import AppStoreBadge from '../components/AppStoreBadge'
 
 const FinalCTA = () => {
   return (
@@ -18,15 +18,7 @@ const FinalCTA = () => {
         <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
           Download HUGE and start transforming how you save and analyze ads.
         </p>
-        <a 
-          href="https://apps.apple.com/us/app/huge/id6754827936" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          <Button variant="primary" className="text-lg px-12 py-5 shadow-2xl">
-            Download
-          </Button>
-        </a>
+        <AppStoreBadge className="h-16 md:h-20" />
         
         {/* Social proof */}
         <div className="mt-12 flex items-center justify-center gap-2 text-gray-300 text-sm">

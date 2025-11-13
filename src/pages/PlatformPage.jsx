@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Button from '../components/Button'
 import Card from '../components/Card'
+import AppStoreBadge from '../components/AppStoreBadge'
 
 const PlatformPage = () => {
   const { platformName } = useParams()
@@ -471,15 +472,7 @@ const PlatformPage = () => {
               Instantly save and analyze ads from {platform.name} using the iOS share sheet. Get AI-powered insights in seconds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://apps.apple.com/us/app/huge/id6754827936" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button variant="primary" className="text-lg px-8 py-4">
-                  Download HUGE
-                </Button>
-              </a>
+              <AppStoreBadge className="h-14 md:h-16" />
               <Link to="/">
                 <Button variant="outline" className="text-lg px-8 py-4">
                   Back to Home
@@ -566,15 +559,7 @@ const PlatformPage = () => {
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Download HUGE and instantly save and analyze ads from {platform.name} and all your favorite platforms.
           </p>
-          <a 
-            href="https://apps.apple.com/us/app/huge/id6754827936" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <Button variant="primary" className="text-lg px-12 py-5">
-              Download HUGE
-            </Button>
-          </a>
+          <AppStoreBadge className="h-16 md:h-20" />
         </div>
       </section>
     </div>

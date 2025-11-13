@@ -1,4 +1,4 @@
-import Button from '../components/Button'
+import AppStoreBadge from '../components/AppStoreBadge'
 
 const Hero = () => {
   return (
@@ -25,26 +25,18 @@ const Hero = () => {
               HUGE lets marketers instantly save viral ads and videos from any platform, analyze them with AI, and share insights with their team.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-              <a 
-                href="https://apps.apple.com/us/app/huge/id6754827936" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                    <Button variant="primary" className="w-full sm:w-auto">
-                      Download
-                    </Button>
-              </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4 items-center">
+              <AppStoreBadge className="h-[52px]" />
               <a 
                 href="https://cal.com/usegather/30min" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto"
+                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm md:text-base underline decoration-gray-400 hover:decoration-gray-600"
               >
-                <Button variant="outline" className="w-full sm:w-auto">
-                  Book a Call
-                </Button>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>Book a Call</span>
               </a>
             </div>
           </div>

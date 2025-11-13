@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="min-h-[110vh] flex items-center justify-center px-8 md:px-12 lg:px-16 xl:px-24 pt-32 md:pt-40 pb-32 md:pb-40 relative overflow-hidden">
+      <section className="min-h-[110vh] flex items-center justify-center px-8 md:px-12 lg:px-16 xl:px-24 pt-8 sm:pt-10 md:pt-32 lg:pt-40 pb-16 sm:pb-20 md:pb-32 lg:pb-40 relative overflow-hidden">
         {/* Premium Background Gradient */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/40 via-white to-purple-50/30"></div>
@@ -26,31 +26,31 @@ const Hero = () => {
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-32 xl:gap-40 items-center">
             {/* Left Content - Refined Typography */}
-            <div className="text-center lg:text-left space-y-4 order-2 lg:order-1 max-w-[540px] mx-auto lg:mx-0 lg:-ml-4">
+            <div className="text-center lg:text-left space-y-2 sm:space-y-3 md:space-y-4 order-2 lg:order-1 max-w-[540px] mx-auto lg:mx-0 lg:-ml-4">
               {/* Headline Block - Tightened Spacing */}
-              <div className="space-y-0 -mb-2">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.9] tracking-tight text-gray-900">
+              <div className="space-y-0 -mb-1 sm:-mb-2">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.9] tracking-tight text-gray-900">
                   Understand winning ads instantly.
                 </h1>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.9] tracking-tight premium-neon-gradient">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.9] tracking-tight premium-neon-gradient">
                   Then beat them.
                 </h1>
               </div>
               
               {/* Subline - Moved Closer */}
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed -mt-4">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed -mt-2 sm:-mt-3 md:-mt-4">
                 One tap to save. AI analyzes everything.<br />
                 Your team gets smarter, your ads get better.
               </p>
               
               {/* CTA Stack - Refined */}
-              <div className="flex flex-col gap-3 pt-4">
-                <div className="flex flex-col sm:flex-row gap-2 justify-center lg:justify-start">
+              <div className="flex flex-col gap-2 sm:gap-3 pt-2 sm:pt-3 md:pt-4">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-2 justify-center lg:justify-start">
                   <a
                     href="https://apps.apple.com/us/app/huge/id6754827936"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group px-8 py-[18px] bg-gray-900 text-white font-bold text-base rounded-lg hover:bg-gray-800 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2"
+                    className="group w-full sm:w-auto px-8 py-3 sm:py-[18px] bg-gray-900 text-white font-bold text-base rounded-lg hover:bg-gray-800 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -61,7 +61,7 @@ const Hero = () => {
                     href="https://cal.com/usegather/30min" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-8 py-[18px] border border-gray-300 text-gray-700 font-semibold text-base rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 shadow-sm"
+                    className="w-full sm:w-auto px-8 py-3 sm:py-[18px] border border-gray-300 text-gray-700 font-semibold text-base rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 shadow-sm"
                   >
                     Book a 15-min Demo
                   </a>
@@ -73,10 +73,10 @@ const Hero = () => {
             </div>
             
             {/* Right Phone Mockup - Refined */}
-            <div className="flex justify-center lg:justify-start relative order-1 lg:order-2 lg:ml-[-6%] lg:pt-0">
-              <div className="relative">
+            <div className="flex justify-center lg:justify-start relative order-1 lg:order-2 lg:ml-[-6%] lg:pt-0 mt-8 sm:mt-10 md:mt-0">
+              <div className="relative scale-75 sm:scale-90 md:scale-100">
                 {/* Soft Halo Glow - Refined */}
-                <div className="absolute inset-0 -z-10 w-full h-full bg-[#7d5cff] opacity-14 rounded-[3.5rem] blur-3xl scale-110"></div>
+                <div className="absolute inset-0 -z-10 w-full h-full bg-[#7d5cff] opacity-8 sm:opacity-10 md:opacity-14 rounded-[3.5rem] blur-3xl scale-110"></div>
                 
                 {/* Phone Mockup */}
                 <div 

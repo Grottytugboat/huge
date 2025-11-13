@@ -64,11 +64,6 @@ const ShareFrom = () => {
       color: "bg-blue-50"
     },
     { 
-      name: "Pinterest", 
-      logo: "https://cdn.simpleicons.org/pinterest/BD081C",
-      color: "bg-red-50"
-    },
-    { 
       name: "X (Twitter)", 
       logo: "https://cdn.simpleicons.org/x/000000",
       color: "bg-gray-50"
@@ -94,11 +89,6 @@ const ShareFrom = () => {
       color: "bg-pink-50"
     },
     { 
-      name: "Snapchat", 
-      logo: "https://cdn.simpleicons.org/snapchat/FFFC00",
-      color: "bg-yellow-50"
-    },
-    { 
       name: "Tumblr", 
       logo: "https://cdn.simpleicons.org/tumblr/36465D",
       color: "bg-gray-50"
@@ -117,11 +107,6 @@ const ShareFrom = () => {
       name: "Weibo", 
       logo: "https://cdn.simpleicons.org/sinaweibo/E6162D",
       color: "bg-red-50"
-    },
-    { 
-      name: "Any Platform", 
-      logo: "https://cdn.simpleicons.org/link/0A66C2",
-      color: "bg-blue-50"
     }
   ]
 
@@ -141,65 +126,131 @@ const ShareFrom = () => {
           </p>
         </div>
         
-        {/* Platform logos grid - symmetrical */}
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-6">
-          {platforms.map((platform, index) => {
-            // Map platform names to slugs
-            const slugMap = {
-              'Instagram': 'instagram',
-              'YouTube': 'youtube',
-              'TikTok': 'tiktok',
-              'Facebook': 'facebook',
-              'Twitter': 'twitter',
-              'LinkedIn': 'linkedin',
-              'Twitch': 'twitch',
-              'X (Twitter)': 'twitter',
-              'Snapchat': 'snapchat',
-              'Pinterest': 'pinterest',
-              'Reddit': 'reddit',
-              'Vimeo': 'vimeo',
-              'Dailymotion': 'dailymotion',
-              'Threads': 'threads',
-              'YouTube Shorts': 'youtube-shorts',
-              'Reels': 'reels',
-              'Stories': 'stories',
-              'Tumblr': 'tumblr',
-              'VK': 'vk',
-              'WeChat': 'wechat',
-              'Weibo': 'weibo',
-              'Any Platform': 'any-platform'
-            }
-            
-            const platformSlug = slugMap[platform.name] || platform.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')
-            const hasPage = slugMap[platform.name] !== undefined
-            
-            const CardContent = (
-              <Card className={`text-center group ${platform.color} p-4 md:p-6 ${hasPage ? 'cursor-pointer' : ''}`}>
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-white rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 p-2 md:p-3">
-                  <img 
-                    src={platform.logo} 
-                    alt={platform.name}
-                    className="w-full h-full object-contain"
-                    onError={(e) => {
-                      e.target.style.display = 'none'
-                      e.target.parentElement.innerHTML = `<div class="text-xl md:text-2xl">${platform.name.charAt(0)}</div>`
-                    }}
-                  />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold text-gray-900">{platform.name}</h3>
-              </Card>
-            )
-            
-            return hasPage ? (
-              <Link key={index} to={`/platform/${platformSlug}`} className="block">
-                {CardContent}
-              </Link>
-            ) : (
-              <div key={index}>
-                {CardContent}
-              </div>
-            )
-          })}
+        {/* Platform logos marquee - 2 rows */}
+        <div className="w-full overflow-hidden">
+          {/* Row 1 */}
+          <div className="marquee mb-4">
+            <div className="marquee-content">
+              {[...platforms, ...platforms].map((platform, index) => {
+                const slugMap = {
+                  'Instagram': 'instagram',
+                  'YouTube': 'youtube',
+                  'TikTok': 'tiktok',
+                  'Facebook': 'facebook',
+                  'Twitter': 'twitter',
+                  'LinkedIn': 'linkedin',
+                  'Twitch': 'twitch',
+                  'X (Twitter)': 'twitter',
+                  'Snapchat': 'snapchat',
+                  'Pinterest': 'pinterest',
+                  'Reddit': 'reddit',
+                  'Vimeo': 'vimeo',
+                  'Dailymotion': 'dailymotion',
+                  'Threads': 'threads',
+                  'YouTube Shorts': 'youtube-shorts',
+                  'Reels': 'reels',
+                  'Stories': 'stories',
+                  'Tumblr': 'tumblr',
+                  'VK': 'vk',
+                  'WeChat': 'wechat',
+                  'Weibo': 'weibo',
+                  'Any Platform': 'any-platform'
+                }
+                
+                const platformSlug = slugMap[platform.name] || platform.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')
+                const hasPage = slugMap[platform.name] !== undefined
+                
+                const CardContent = (
+                  <Card className={`text-center group ${platform.color} p-2 md:p-3 flex-shrink-0 w-24 md:w-32 ${hasPage ? 'cursor-pointer' : ''}`}>
+                    <div className="w-8 h-8 md:w-10 md:h-10 mx-auto mb-2 bg-white rounded-lg flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 p-1.5">
+                      <img 
+                        src={platform.logo} 
+                        alt={platform.name}
+                        className="w-full h-full object-contain"
+                        onError={(e) => {
+                          e.target.style.display = 'none'
+                          e.target.parentElement.innerHTML = `<div class="text-sm md:text-base">${platform.name.charAt(0)}</div>`
+                        }}
+                      />
+                    </div>
+                    <h3 className="text-xs md:text-sm font-bold text-gray-900">{platform.name}</h3>
+                  </Card>
+                )
+                
+                return hasPage ? (
+                  <Link key={index} to={`/platform/${platformSlug}`} className="block mr-3">
+                    {CardContent}
+                  </Link>
+                ) : (
+                  <div key={index} className="mr-3">
+                    {CardContent}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          
+          {/* Row 2 - reverse direction */}
+          <div className="marquee">
+            <div className="marquee-content-reverse">
+              {[...platforms, ...platforms].map((platform, index) => {
+                const slugMap = {
+                  'Instagram': 'instagram',
+                  'YouTube': 'youtube',
+                  'TikTok': 'tiktok',
+                  'Facebook': 'facebook',
+                  'Twitter': 'twitter',
+                  'LinkedIn': 'linkedin',
+                  'Twitch': 'twitch',
+                  'X (Twitter)': 'twitter',
+                  'Snapchat': 'snapchat',
+                  'Pinterest': 'pinterest',
+                  'Reddit': 'reddit',
+                  'Vimeo': 'vimeo',
+                  'Dailymotion': 'dailymotion',
+                  'Threads': 'threads',
+                  'YouTube Shorts': 'youtube-shorts',
+                  'Reels': 'reels',
+                  'Stories': 'stories',
+                  'Tumblr': 'tumblr',
+                  'VK': 'vk',
+                  'WeChat': 'wechat',
+                  'Weibo': 'weibo',
+                  'Any Platform': 'any-platform'
+                }
+                
+                const platformSlug = slugMap[platform.name] || platform.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')
+                const hasPage = slugMap[platform.name] !== undefined
+                
+                const CardContent = (
+                  <Card className={`text-center group ${platform.color} p-2 md:p-3 flex-shrink-0 w-24 md:w-32 ${hasPage ? 'cursor-pointer' : ''}`}>
+                    <div className="w-8 h-8 md:w-10 md:h-10 mx-auto mb-2 bg-white rounded-lg flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 p-1.5">
+                      <img 
+                        src={platform.logo} 
+                        alt={platform.name}
+                        className="w-full h-full object-contain"
+                        onError={(e) => {
+                          e.target.style.display = 'none'
+                          e.target.parentElement.innerHTML = `<div class="text-sm md:text-base">${platform.name.charAt(0)}</div>`
+                        }}
+                      />
+                    </div>
+                    <h3 className="text-xs md:text-sm font-bold text-gray-900">{platform.name}</h3>
+                  </Card>
+                )
+                
+                return hasPage ? (
+                  <Link key={index} to={`/platform/${platformSlug}`} className="block mr-3">
+                    {CardContent}
+                  </Link>
+                ) : (
+                  <div key={index} className="mr-3">
+                    {CardContent}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>

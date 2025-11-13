@@ -16,7 +16,9 @@ const Hero = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
               Save ads instantly.
               <br />
-              <span className="gradient-text">Unlock insights automatically.</span>
+              <span className="gradient-text-animated inline-block">
+                Unlock insights automatically.
+              </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
@@ -30,9 +32,9 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
               >
-                <Button variant="primary" className="w-full sm:w-auto" sparkle={true}>
-                  Download
-                </Button>
+                    <Button variant="primary" className="w-full sm:w-auto">
+                      Download
+                    </Button>
               </a>
               <a 
                 href="https://cal.com/usegather/30min" 

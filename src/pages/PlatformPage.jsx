@@ -395,6 +395,46 @@ const PlatformPage = () => {
   
   const platform = platformData[platformName?.toLowerCase()] || platformData.instagram
   
+  // Function to get icon for each step based on keywords
+  const getStepIcon = (step, index) => {
+    const text = step.toLowerCase()
+    
+    if (index === 0 || text.includes('open') || text.includes('find')) {
+      return (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      )
+    }
+    if (index === 1 || text.includes('tap') || text.includes('share button') || text.includes('button')) {
+      return (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+        </svg>
+      )
+    }
+    if (index === 2 || text.includes('select') || text.includes('choose') || text.includes('huge')) {
+      return (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+    }
+    if (index === 3 || text.includes('analyze') || text.includes('save') || text.includes('get') || text.includes('instant')) {
+      return (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      )
+    }
+    // Default icon
+    return (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+      </svg>
+    )
+  }
+  
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -436,7 +476,7 @@ const PlatformPage = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <Button variant="primary" className="text-lg px-8 py-4" sparkle={true}>
+                <Button variant="primary" className="text-lg px-8 py-4">
                   Download HUGE
                 </Button>
               </a>
@@ -465,8 +505,8 @@ const PlatformPage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {platform.steps.map((step, index) => (
               <Card key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 mx-auto">
-                  {index + 1}
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-purple-600 rounded-full flex items-center justify-center text-white mb-4 mx-auto">
+                  {getStepIcon(step, index)}
                 </div>
                 <p className="text-gray-700 leading-relaxed">{step}</p>
               </Card>
@@ -531,7 +571,7 @@ const PlatformPage = () => {
             target="_blank" 
             rel="noopener noreferrer"
           >
-            <Button variant="primary" className="text-lg px-12 py-5" sparkle={true}>
+            <Button variant="primary" className="text-lg px-12 py-5">
               Download HUGE
             </Button>
           </a>

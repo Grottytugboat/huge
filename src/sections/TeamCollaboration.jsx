@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Card from '../components/Card'
 
 const TeamCollaboration = () => {
@@ -142,55 +143,65 @@ const TeamCollaboration = () => {
         
         {/* Platform logos grid - symmetrical */}
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-6 mb-16">
-          {platforms.map((platform, index) => (
-            <Card key={index} className={`text-center group ${platform.color} p-4 md:p-6`}>
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-white rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 p-2 md:p-3">
-                <img 
-                  src={platform.logo} 
-                  alt={platform.name}
-                  className="w-full h-full object-contain"
-                  onError={(e) => {
-                    e.target.style.display = 'none'
-                    e.target.parentElement.innerHTML = `<div class="text-xl md:text-2xl">${platform.name.charAt(0)}</div>`
-                  }}
-                />
+          {platforms.map((platform, index) => {
+            // Map platform names to slugs
+            const slugMap = {
+              'Slack': 'slack',
+              'Notion': 'notion',
+              'Discord': 'discord',
+              'Microsoft Teams': 'microsoft-teams',
+              'Google Workspace': 'google-workspace',
+              'Asana': 'asana',
+              'WhatsApp': 'whatsapp',
+              'Telegram': 'telegram',
+              'Email': 'email',
+              'Twitter': 'twitter',
+              'LinkedIn': 'linkedin',
+              'Messages': 'messages',
+              'AirDrop': 'airdrop',
+              'Copy Link': 'copy-link',
+              'Trello': 'trello',
+              'Monday.com': 'monday-com',
+              'Jira': 'jira',
+              'Linear': 'linear',
+              'Dropbox': 'dropbox',
+              'Google Drive': 'google-drive',
+              'OneDrive': 'onedrive',
+              'Basecamp': 'basecamp',
+              'Facebook Messenger': 'facebook-messenger',
+              'Instagram': 'instagram'
+            }
+            
+            const collaborationSlug = slugMap[platform.name] || platform.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')
+            const hasPage = slugMap[platform.name] !== undefined
+            
+            const CardContent = (
+              <Card className={`text-center group ${platform.color} p-4 md:p-6 ${hasPage ? 'cursor-pointer' : ''}`}>
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-white rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 p-2 md:p-3">
+                  <img 
+                    src={platform.logo} 
+                    alt={platform.name}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                      e.target.parentElement.innerHTML = `<div class="text-xl md:text-2xl">${platform.name.charAt(0)}</div>`
+                    }}
+                  />
+                </div>
+                <h3 className="text-sm md:text-lg font-bold text-gray-900">{platform.name}</h3>
+              </Card>
+            )
+            
+            return hasPage ? (
+              <Link key={index} to={`/collaboration/${collaborationSlug}`} className="block">
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={index}>
+                {CardContent}
               </div>
-              <h3 className="text-sm md:text-lg font-bold text-gray-900">{platform.name}</h3>
-            </Card>
-          ))}
-        </div>
-        
-        {/* Clean card layout showcase - symmetrical */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="group">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary-600 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                H
-              </div>
-              <div>
-                <h3 className="font-bold text-xl text-gray-900">Share to Team</h3>
-                <p className="text-gray-600 text-sm">One tap sharing</p>
-              </div>
-            </div>
-            <p className="text-gray-700 leading-relaxed">
-              Instantly share saved ads and AI insights with your team. Works seamlessly with your existing workflow tools.
-            </p>
-          </Card>
-          
-          <Card className="group">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary-600 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                ⚡
-              </div>
-              <div>
-                <h3 className="font-bold text-xl text-gray-900">Real-time Updates</h3>
-                <p className="text-gray-600 text-sm">Stay in sync</p>
-              </div>
-            </div>
-            <p className="text-gray-700 leading-relaxed">
-              Your team gets notified when new insights are available. Everyone stays on the same page.
-            </p>
-          </Card>
+            )
+          })}
         </div>
       </div>
     </section>

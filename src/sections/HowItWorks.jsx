@@ -62,21 +62,6 @@ const HowItWorks = () => {
             </div>
           ))}
         </div>
-        
-        {/* Supporting mobile screens showcase */}
-        <div className="mt-20 flex justify-center gap-6 overflow-x-auto pb-4">
-          {[1, 2, 3, 4].map((num) => (
-            <div
-              key={num}
-              className="flex-shrink-0 w-48 aspect-[9/19.5] bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-2 shadow-2xl ring-2 ring-primary-500/20"
-            >
-              <div className="w-full h-full bg-gradient-to-br from-white to-gray-50 rounded-xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-purple-500/5"></div>
-                <span className="text-gray-600 text-xs relative z-10 font-medium">Step {num} Screen</span>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   )

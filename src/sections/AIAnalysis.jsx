@@ -51,7 +51,7 @@ const AIAnalysis = () => {
         </div>
         
         {/* Modern grid - 6 items in 2 rows of 3 */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="group text-center">
               <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
@@ -59,16 +59,6 @@ const AIAnalysis = () => {
               <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
             </Card>
           ))}
-        </div>
-        
-        {/* Screenshot showcase - full width, no extra spacing */}
-        <div className="w-full">
-          <div className="w-full max-w-5xl mx-auto aspect-video bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-4 shadow-2xl ring-4 ring-primary-500/10">
-            <div className="w-full h-full bg-gradient-to-br from-white to-gray-50 rounded-2xl flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-purple-500/10 to-transparent"></div>
-              <span className="text-gray-600 relative z-10 font-medium">AI Analysis Screenshot</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

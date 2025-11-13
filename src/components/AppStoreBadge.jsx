@@ -9,16 +9,14 @@ const AppStoreBadge = ({ className = '', href = "https://apps.apple.com/us/app/h
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`relative inline-block hover:opacity-80 transition-opacity ${className}`}
+      className={`relative inline-block ${className}`}
       onMouseEnter={() => setShowConfetti(true)}
       onMouseLeave={() => setShowConfetti(false)}
       style={{ position: 'relative', overflow: 'visible' }}
     >
-      <img 
-        src="/app-store-badge.png" 
-        alt="Download on the App Store"
-        className="h-full w-auto"
-      />
+      <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl">
+        Get
+      </button>
       <Confetti trigger={showConfetti} />
     </a>
   )

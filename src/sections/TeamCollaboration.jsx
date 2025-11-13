@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Card from '../components/Card'
 
 const TeamCollaboration = () => {
   const platforms = [
@@ -20,7 +19,7 @@ const TeamCollaboration = () => {
     },
     { 
       name: "Microsoft Teams", 
-      logo: "https://cdn.simpleicons.org/microsoftteams/6264A7",
+      logo: "/microsoft-teams-icon.png",
       color: "bg-blue-50"
     },
     { 
@@ -55,12 +54,12 @@ const TeamCollaboration = () => {
     },
     { 
       name: "LinkedIn", 
-      logo: "https://cdn.simpleicons.org/linkedin/0A66C2",
+      logo: "/linkedin-icon.png",
       color: "bg-blue-50"
     },
     { 
       name: "Messages", 
-      logo: "https://cdn.simpleicons.org/applemessages/007AFF",
+      logo: "https://cdn.simpleicons.org/apple/007AFF",
       color: "bg-blue-50"
     },
     { 
@@ -69,19 +68,9 @@ const TeamCollaboration = () => {
       color: "bg-gray-50"
     },
     { 
-      name: "Copy Link", 
-      logo: "https://cdn.simpleicons.org/link/0A66C2",
-      color: "bg-blue-50"
-    },
-    { 
       name: "Trello", 
       logo: "https://cdn.simpleicons.org/trello/0052CC",
       color: "bg-blue-50"
-    },
-    { 
-      name: "Monday.com", 
-      logo: "https://cdn.simpleicons.org/monday/FF0080",
-      color: "bg-pink-50"
     },
     { 
       name: "Jira", 
@@ -101,11 +90,6 @@ const TeamCollaboration = () => {
     { 
       name: "Google Drive", 
       logo: "https://cdn.simpleicons.org/googledrive/4285F4",
-      color: "bg-blue-50"
-    },
-    { 
-      name: "OneDrive", 
-      logo: "https://cdn.simpleicons.org/microsoftonedrive/0078D4",
       color: "bg-blue-50"
     },
     { 
@@ -141,67 +125,65 @@ const TeamCollaboration = () => {
           </p>
         </div>
         
-        {/* Platform logos grid - symmetrical */}
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-6 mb-16">
-          {platforms.map((platform, index) => {
-            // Map platform names to slugs
-            const slugMap = {
-              'Slack': 'slack',
-              'Notion': 'notion',
-              'Discord': 'discord',
-              'Microsoft Teams': 'microsoft-teams',
-              'Google Workspace': 'google-workspace',
-              'Asana': 'asana',
-              'WhatsApp': 'whatsapp',
-              'Telegram': 'telegram',
-              'Email': 'email',
-              'Twitter': 'twitter',
-              'LinkedIn': 'linkedin',
-              'Messages': 'messages',
-              'AirDrop': 'airdrop',
-              'Copy Link': 'copy-link',
-              'Trello': 'trello',
-              'Monday.com': 'monday-com',
-              'Jira': 'jira',
-              'Linear': 'linear',
-              'Dropbox': 'dropbox',
-              'Google Drive': 'google-drive',
-              'OneDrive': 'onedrive',
-              'Basecamp': 'basecamp',
-              'Facebook Messenger': 'facebook-messenger',
-              'Instagram': 'instagram'
-            }
-            
-            const collaborationSlug = slugMap[platform.name] || platform.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')
-            const hasPage = slugMap[platform.name] !== undefined
-            
-            const CardContent = (
-              <Card className={`text-center group ${platform.color} p-4 md:p-6 ${hasPage ? 'cursor-pointer' : ''}`}>
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-white rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 p-2 md:p-3">
-                  <img 
-                    src={platform.logo} 
-                    alt={platform.name}
-                    className="w-full h-full object-contain"
-                    onError={(e) => {
-                      e.target.style.display = 'none'
-                      e.target.parentElement.innerHTML = `<div class="text-xl md:text-2xl">${platform.name.charAt(0)}</div>`
-                    }}
-                  />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold text-gray-900">{platform.name}</h3>
-              </Card>
-            )
-            
-            return hasPage ? (
-              <Link key={index} to={`/collaboration/${collaborationSlug}`} className="block">
-                {CardContent}
-              </Link>
-            ) : (
-              <div key={index}>
-                {CardContent}
-              </div>
-            )
-          })}
+        {/* Platform logos marquee - single row */}
+        <div className="w-full overflow-hidden mb-16">
+          <div className="marquee">
+            <div className="marquee-content-smooth">
+              {[...platforms, ...platforms, ...platforms].map((platform, index) => {
+                // Map platform names to slugs
+                const slugMap = {
+                  'Slack': 'slack',
+                  'Notion': 'notion',
+                  'Discord': 'discord',
+                  'Microsoft Teams': 'microsoft-teams',
+                  'Google Workspace': 'google-workspace',
+                  'Asana': 'asana',
+                  'WhatsApp': 'whatsapp',
+                  'Telegram': 'telegram',
+                  'Email': 'email',
+                  'Twitter': 'twitter',
+                  'LinkedIn': 'linkedin',
+                  'Messages': 'messages',
+                  'AirDrop': 'airdrop',
+                  'Trello': 'trello',
+                  'Jira': 'jira',
+                  'Linear': 'linear',
+                  'Dropbox': 'dropbox',
+                  'Google Drive': 'google-drive',
+                  'Basecamp': 'basecamp',
+                  'Facebook Messenger': 'facebook-messenger',
+                  'Instagram': 'instagram'
+                }
+                
+                const collaborationSlug = slugMap[platform.name] || platform.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')
+                const hasPage = slugMap[platform.name] !== undefined
+                
+                const LogoContent = (
+                  <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 flex-shrink-0 group hover:scale-110 transition-transform duration-300">
+                    <img 
+                      src={platform.logo} 
+                      alt={platform.name}
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        e.target.style.display = 'none'
+                        e.target.parentElement.innerHTML = `<div class="text-xl md:text-2xl text-gray-400">${platform.name.charAt(0)}</div>`
+                      }}
+                    />
+                  </div>
+                )
+                
+                return hasPage ? (
+                  <Link key={index} to={`/collaboration/${collaborationSlug}`} className="block mx-4">
+                    {LogoContent}
+                  </Link>
+                ) : (
+                  <div key={index} className="mx-4">
+                    {LogoContent}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>

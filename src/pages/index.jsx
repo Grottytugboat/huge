@@ -8,6 +8,7 @@ import ShareFrom from '../sections/ShareFrom'
 import TeamCollaboration from '../sections/TeamCollaboration'
 import TargetUsers from '../sections/TargetUsers'
 import FinalCTA from '../sections/FinalCTA'
+import AnimatedArrow from '../components/AnimatedArrow'
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <HowItWorks />
       <AIAnalysis />
       <ShareFrom />
+      <AnimatedArrow />
       <TeamCollaboration />
       <TargetUsers />
       <FinalCTA />

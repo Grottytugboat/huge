@@ -101,6 +101,77 @@
   .animate-bounce-arrow {
     animation: bounce-arrow 1.5s ease-in-out infinite;
   }
+
+  @keyframes arrow-bounce {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(12px);
+      opacity: 0.85;
+    }
+  }
+
+  @keyframes float-up-1 {
+    0% {
+      transform: translateY(0) translateX(0) scale(0);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-40px) translateX(5px) scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes float-up-2 {
+    0% {
+      transform: translateY(0) translateX(0) scale(0);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-40px) translateX(-5px) scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes float-up-3 {
+    0% {
+      transform: translateY(0) translateX(0) scale(0);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-35px) translateX(0) scale(1);
+      opacity: 0;
+    }
+  }
+
+  .animate-arrow-bounce {
+    animation: arrow-bounce 2s ease-in-out infinite;
+  }
+
+  .animate-float-up-1 {
+    animation: float-up-1 2.5s ease-in-out infinite;
+  }
+
+  .animate-float-up-2 {
+    animation: float-up-2 2.5s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  .animate-float-up-3 {
+    animation: float-up-3 2.5s ease-in-out infinite;
+    animation-delay: 1s;
+  }
   
   .sparkle-button {
     position: relative;
@@ -263,9 +334,23 @@
     display: flex;
     animation: marquee-reverse 40s linear infinite;
   }
+
+  .marquee-content-smooth {
+    display: flex;
+    animation: marquee 60s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-content-reverse-smooth {
+    display: flex;
+    animation: marquee-reverse 60s linear infinite;
+    will-change: transform;
+  }
   
   .marquee-content:hover,
-  .marquee-content-reverse:hover {
+  .marquee-content-reverse:hover,
+  .marquee-content-smooth:hover,
+  .marquee-content-reverse-smooth:hover {
     animation-play-state: paused;
   }
   

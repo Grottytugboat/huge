@@ -55,7 +55,7 @@ const CollaborationPage = () => {
     },
     'microsoft-teams': {
       name: "Microsoft Teams",
-      logo: "https://cdn.simpleicons.org/microsoftteams/6264A7",
+      logo: "/microsoft-teams-icon.png",
       color: "bg-blue-50",
       brandColor: "from-blue-600 to-blue-700",
       benefits: [

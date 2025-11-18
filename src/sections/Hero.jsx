@@ -24,22 +24,22 @@ const Hero = () => {
         </div>
         
         <div className="max-w-7xl mx-auto w-full relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-32 xl:gap-40 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 sm:gap-20 lg:gap-40 xl:gap-48 items-center">
             {/* Left Content - Enhanced Typography & Spacing */}
             <div className="text-center lg:text-left order-2 lg:order-1 max-w-[600px] mx-auto lg:mx-0 lg:-ml-4">
               {/* Headline Block - Improved Spacing & Hierarchy */}
-              <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-7 md:mb-8">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-gray-900">
+              <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-7 md:mb-8">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900">
                   One-tap save. AI teardown.
                 </h1>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-bold leading-[1.05] tracking-tight premium-neon-gradient">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight premium-neon-gradient">
                   Instant competitive edge.
                 </h1>
               </div>
               
               {/* Subheadline - Better Size Contrast */}
               <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-[1.5] mb-8 sm:mb-10 md:mb-12 max-w-[520px] mx-auto lg:mx-0">
-                See exactly why their ads work—then outperform them fast.
+                See exactly why their ads work, then outperform them fast.
               </p>
               
               {/* CTA Stack - Improved Spacing */}

@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import AppStoreBadge from '../components/AppStoreBadge'
 
 const FinalCTA = () => {
   return (
@@ -18,10 +17,19 @@ const FinalCTA = () => {
         <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
           Download HUGE and start transforming how you save and analyze ads.
         </p>
-        <AppStoreBadge className="h-16 md:h-20" />
+        
+        {/* Simple Get Button */}
+        <a
+          href="https://apps.apple.com/us/app/huge/id6754827936"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-12 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-full hover:from-cyan-400 hover:to-blue-400 transition-all duration-200 shadow-xl hover:shadow-2xl"
+        >
+          Get
+        </a>
         
         {/* Social proof */}
-        <div className="mt-12 flex items-center justify-center gap-2 text-gray-300 text-sm">
+        <div className="mt-8 flex items-center justify-center gap-2 text-gray-300 text-sm">
           <span>✓</span>
           <span>No credit card required</span>
           <span>•</span>

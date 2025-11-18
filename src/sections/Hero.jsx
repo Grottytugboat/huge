@@ -30,15 +30,15 @@ const Hero = () => {
               {/* Headline Block - Improved Spacing & Hierarchy */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-7 md:mb-8">
                 <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-[1.3] tracking-tight text-gray-900">
-                  Save any ad. AI decodes it.
+                  Understand...
                 </h1>
                 <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-[1.3] tracking-tight premium-neon-gradient">
-                  You beat it.
+                  Then beat them.
                 </h1>
               </div>
               
               {/* Subheadline - Better Size Contrast */}
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-[1.5] mb-8 sm:mb-10 md:mb-12 max-w-[520px] mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-[1.5] mb-8 sm:mb-10 md:mb-12 max-w-[520px] mx-auto lg:mx-0">
                 See exactly why their ads work, then outperform them fast.
               </p>
               

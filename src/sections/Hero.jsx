@@ -30,17 +30,16 @@ const Hero = () => {
               {/* Headline Block - Tightened Spacing */}
               <div className="space-y-0 -mb-1 sm:-mb-2">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.9] tracking-tight text-gray-900">
-                  Understand winning ads instantly.
+                  One-tap save. AI teardown.
                 </h1>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.9] tracking-tight premium-neon-gradient">
-                  Then beat them.
+                  Instant competitive edge.
                 </h1>
               </div>
               
               {/* Subline - Moved Closer */}
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed -mt-2 sm:-mt-3 md:-mt-4">
-                One tap to save. AI analyzes everything.<br />
-                Your team gets smarter, your ads get better.
+                See exactly why their ads work—then outperform them fast.
               </p>
               
               {/* CTA Stack - Refined */}

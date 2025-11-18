@@ -29,10 +29,10 @@ const Hero = () => {
             <div className="text-center lg:text-left order-2 lg:order-1 max-w-[600px] mx-auto lg:mx-0 lg:-ml-4">
               {/* Headline Block - Improved Spacing & Hierarchy */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-7 md:mb-8">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-[1.2] tracking-tight text-gray-900">
                   One-tap save. AI teardown.
                 </h1>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight premium-neon-gradient">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-[1.2] tracking-tight premium-neon-gradient">
                   Instant competitive edge.
                 </h1>
               </div>
@@ -104,35 +104,35 @@ const Hero = () => {
                   </div>
                 </div>
                 
-                {/* Floating Insight Cards - Repositioned & Aligned */}
-                {/* Card 1: Hook Analysis - Lowered & Spaced */}
-                <div className="hidden md:block absolute top-8 -right-4 md:-right-6 lg:-right-8 bg-white rounded-xl shadow-card-premium p-4 border border-gray-100 animate-float-card-subtle-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                    <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Hook Analysis</span>
+                {/* Floating Insight Cards - Enhanced & Cooler */}
+                {/* Card 1: Hook Analysis - Premium Style */}
+                <div className="hidden md:block absolute top-8 -right-4 md:-right-6 lg:-right-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 border border-green-100 animate-float-card-subtle-1 hover:scale-105 transition-transform duration-300">
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 shadow-sm shadow-green-200 animate-pulse"></div>
+                    <span className="text-[10px] font-bold text-green-600 uppercase tracking-wider">Hook Analysis</span>
                   </div>
-                  <p className="text-sm font-medium text-gray-900">Emotional trigger detected</p>
-                  <p className="text-xs text-gray-500 mt-1">Opens with question</p>
+                  <p className="text-sm font-bold text-gray-900 mb-1">Emotional trigger detected</p>
+                  <p className="text-xs text-gray-600">Opens with question</p>
                 </div>
                 
-                {/* Card 2: Performance Signals - Aligned */}
-                <div className="hidden md:block absolute top-1/2 -translate-y-1/2 -right-4 md:-right-6 lg:-right-8 bg-white rounded-xl shadow-card-premium p-4 border border-gray-100 animate-float-card-subtle-2">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                    <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Performance</span>
+                {/* Card 2: Performance Signals - Premium Style */}
+                <div className="hidden md:block absolute top-1/2 -translate-y-1/2 -right-4 md:-right-6 lg:-right-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 border border-blue-100 animate-float-card-subtle-2 hover:scale-105 transition-transform duration-300">
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500 shadow-sm shadow-blue-200 animate-pulse"></div>
+                    <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Performance</span>
                   </div>
-                  <p className="text-sm font-medium text-gray-900">High engagement score</p>
-                  <p className="text-xs text-gray-500 mt-1">92% completion rate</p>
+                  <p className="text-sm font-bold text-gray-900 mb-1">High engagement score</p>
+                  <p className="text-xs text-gray-600">92% completion rate</p>
                 </div>
                 
-                {/* Card 3: Structure Breakdown - Aligned */}
-                <div className="hidden md:block absolute -bottom-4 -left-4 md:-left-6 lg:-left-8 bg-white rounded-xl shadow-card-premium p-4 border border-gray-100 animate-float-card-subtle-3">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                    <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Structure</span>
+                {/* Card 3: Structure Breakdown - Premium Style */}
+                <div className="hidden md:block absolute -bottom-4 -left-4 md:-left-6 lg:-left-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 border border-purple-100 animate-float-card-subtle-3 hover:scale-105 transition-transform duration-300">
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-purple-400 to-violet-500 shadow-sm shadow-purple-200 animate-pulse"></div>
+                    <span className="text-[10px] font-bold text-purple-600 uppercase tracking-wider">Structure</span>
                   </div>
-                  <p className="text-sm font-medium text-gray-900">3-act format</p>
-                  <p className="text-xs text-gray-500 mt-1">Hook → Problem → Solution</p>
+                  <p className="text-sm font-bold text-gray-900 mb-1">3-act format</p>
+                  <p className="text-xs text-gray-600">Hook → Problem → Solution</p>
                 </div>
               </div>
             </div>

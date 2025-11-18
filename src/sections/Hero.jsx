@@ -29,10 +29,10 @@ const Hero = () => {
             <div className="text-center lg:text-left order-2 lg:order-1 max-w-[600px] mx-auto lg:mx-0 lg:-ml-4">
               {/* Headline Block - Improved Spacing & Hierarchy */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-7 md:mb-8">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-[1.2] tracking-tight text-gray-900">
+                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-[1.3] tracking-tight text-gray-900">
                   One-tap save. AI teardown.
                 </h1>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-[1.2] tracking-tight premium-neon-gradient">
+                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-[1.3] tracking-tight premium-neon-gradient">
                   Instant competitive edge.
                 </h1>
               </div>
@@ -106,7 +106,7 @@ const Hero = () => {
                 
                 {/* Floating Insight Cards - Enhanced & Cooler */}
                 {/* Card 1: Hook Analysis - Premium Style */}
-                <div className="hidden md:block absolute top-8 -right-4 md:-right-6 lg:-right-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 border border-green-100 animate-float-card-subtle-1 hover:scale-105 transition-transform duration-300">
+                <div className="hidden md:block absolute top-8 -right-12 md:-right-16 lg:-right-20 xl:-right-24 bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 border border-green-100 animate-float-card-subtle-1 hover:scale-105 transition-transform duration-300">
                   <div className="flex items-center gap-2.5 mb-3">
                     <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 shadow-sm shadow-green-200 animate-pulse"></div>
                     <span className="text-[10px] font-bold text-green-600 uppercase tracking-wider">Hook Analysis</span>
@@ -116,7 +116,7 @@ const Hero = () => {
                 </div>
                 
                 {/* Card 2: Performance Signals - Premium Style */}
-                <div className="hidden md:block absolute top-1/2 -translate-y-1/2 -right-4 md:-right-6 lg:-right-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 border border-blue-100 animate-float-card-subtle-2 hover:scale-105 transition-transform duration-300">
+                <div className="hidden md:block absolute top-1/2 -translate-y-1/2 -right-12 md:-right-16 lg:-right-20 xl:-right-24 bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 border border-blue-100 animate-float-card-subtle-2 hover:scale-105 transition-transform duration-300">
                   <div className="flex items-center gap-2.5 mb-3">
                     <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500 shadow-sm shadow-blue-200 animate-pulse"></div>
                     <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Performance</span>
@@ -126,7 +126,7 @@ const Hero = () => {
                 </div>
                 
                 {/* Card 3: Structure Breakdown - Premium Style */}
-                <div className="hidden md:block absolute -bottom-4 -left-4 md:-left-6 lg:-left-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 border border-purple-100 animate-float-card-subtle-3 hover:scale-105 transition-transform duration-300">
+                <div className="hidden md:block absolute -bottom-4 -left-12 md:-left-16 lg:-left-20 xl:-left-24 bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 border border-purple-100 animate-float-card-subtle-3 hover:scale-105 transition-transform duration-300">
                   <div className="flex items-center gap-2.5 mb-3">
                     <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-purple-400 to-violet-500 shadow-sm shadow-purple-200 animate-pulse"></div>
                     <span className="text-[10px] font-bold text-purple-600 uppercase tracking-wider">Structure</span>

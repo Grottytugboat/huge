@@ -1,64 +1,63 @@
-import Card from '../components/Card'
-
 const HowItWorks = () => {
   const steps = [
     {
-      number: "01",
-      title: "See a great ad",
-      description: "While scrolling through any platform, you spot an ad that catches your attention.",
-      icon: "👀"
+      number: "1",
+      title: "Save any ad",
+      description: "Share any TikTok, IG Reel, or YouTube Short into your vault.",
+      icon: "✓"
     },
     {
-      number: "02",
-      title: 'Tap "Share → HUGE"',
-      description: "Use the native iOS share sheet to instantly send the ad to HUGE.",
-      icon: "📤"
+      number: "2",
+      title: "AI breaks it down",
+      description: "Hooks, structure, emotions, triggers — fully analyzed automatically.",
+      icon: "💡"
     },
     {
-      number: "03",
-      title: "AI analyzes the ad instantly",
-      description: "Our AI automatically breaks down the ad's structure, hook, and creative elements.",
+      number: "3",
+      title: "Create better ads",
+      description: "Turn insights into scripts, ad angles, and high-performing content.",
       icon: "⚡"
-    },
-    {
-      number: "04",
-      title: "Save, organize, and share insights with your team",
-      description: "Store the ad in your library, tag it, and share insights with your team in one tap.",
-      icon: "🎯"
     }
   ]
 
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-gray-50/50 to-white relative">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-semibold mb-6">
-            How It Works
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Get started in <span className="gradient-text">4 simple steps</span>
+    <section className="py-20 md:py-32 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20"></div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
+            How it works
           </h2>
+          <p className="text-xl md:text-2xl text-gray-300">
+            From tap → insights → better ads.
+          </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+        {/* Steps */}
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
-              <Card className="h-full group">
-                <div className="mb-6 flex items-center justify-between">
-                  <span className="text-6xl font-bold text-primary-100">{step.number}</span>
-                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">{step.icon}</span>
+            <div 
+              key={index} 
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-10 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+            >
+              {/* Number badge */}
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
+                  <span className="text-2xl md:text-3xl font-bold text-white">{step.number}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{step.description}</p>
-              </Card>
+                <span className="text-3xl md:text-4xl group-hover:scale-110 transition-transform duration-300">{step.icon}</span>
+              </div>
               
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
-                  <div className="w-6 h-0.5 bg-gradient-to-r from-primary-300 to-purple-300"></div>
-                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-primary-400 rounded-full"></div>
-                </div>
-              )}
+              {/* Content */}
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
+                {step.title}
+              </h3>
+              <p className="text-base text-gray-300 leading-relaxed">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>

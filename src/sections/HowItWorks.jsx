@@ -21,9 +21,9 @@ const HowItWorks = () => {
   ]
 
   return (
-    <section className="py-20 md:py-32 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+    <section className="py-20 md:py-32 px-6 md:px-12 lg:px-24 bg-black relative overflow-hidden">
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-blue-900/30"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}

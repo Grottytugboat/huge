@@ -29,11 +29,11 @@ const Hero = () => {
             <div className="text-center lg:text-left order-2 lg:order-1 max-w-[600px] mx-auto lg:mx-0 lg:-ml-4">
               {/* Headline Block - Improved Spacing & Hierarchy */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-7 md:mb-8">
-                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-[1.3] tracking-tight text-gray-900">
-                  One-tap save. AI teardown.
+                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-[1.3] tracking-tight text-gray-900">
+                  Save any ad. AI decodes it.
                 </h1>
-                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-[1.3] tracking-tight premium-neon-gradient">
-                  Instant competitive edge.
+                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-[1.3] tracking-tight premium-neon-gradient">
+                  You beat it.
                 </h1>
               </div>
               

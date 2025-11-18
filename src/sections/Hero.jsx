@@ -25,33 +25,33 @@ const Hero = () => {
         
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-32 xl:gap-40 items-center">
-            {/* Left Content - Refined Typography */}
-            <div className="text-center lg:text-left space-y-2 sm:space-y-3 md:space-y-4 order-2 lg:order-1 max-w-[540px] mx-auto lg:mx-0 lg:-ml-4">
-              {/* Headline Block - Tightened Spacing */}
-              <div className="space-y-0 -mb-1 sm:-mb-2">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.9] tracking-tight text-gray-900">
+            {/* Left Content - Enhanced Typography & Spacing */}
+            <div className="text-center lg:text-left order-2 lg:order-1 max-w-[600px] mx-auto lg:mx-0 lg:-ml-4">
+              {/* Headline Block - Improved Spacing & Hierarchy */}
+              <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-7 md:mb-8">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-gray-900">
                   One-tap save. AI teardown.
                 </h1>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.9] tracking-tight premium-neon-gradient">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-bold leading-[1.05] tracking-tight premium-neon-gradient">
                   Instant competitive edge.
                 </h1>
               </div>
               
-              {/* Subline - Moved Closer */}
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed -mt-2 sm:-mt-3 md:-mt-4">
+              {/* Subheadline - Better Size Contrast */}
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-[1.5] mb-8 sm:mb-10 md:mb-12 max-w-[520px] mx-auto lg:mx-0">
                 See exactly why their ads work—then outperform them fast.
               </p>
               
-              {/* CTA Stack - Refined */}
-              <div className="flex flex-col gap-2 sm:gap-3 pt-2 sm:pt-3 md:pt-4">
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-2 justify-center lg:justify-start">
+              {/* CTA Stack - Improved Spacing */}
+              <div className="flex flex-col gap-3 sm:gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-3 justify-center lg:justify-start">
                   <a
                     href="https://apps.apple.com/us/app/huge/id6754827936"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group w-full sm:w-auto px-8 py-3 sm:py-[18px] bg-gray-900 text-white font-bold text-base rounded-lg hover:bg-gray-800 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2"
+                    className="group w-full sm:w-auto px-10 py-4 sm:py-[20px] bg-gray-900 text-white font-bold text-base sm:text-lg rounded-xl hover:bg-gray-800 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2.5"
                   >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                     Start Free No Card
@@ -60,12 +60,12 @@ const Hero = () => {
                     href="https://cal.com/usegather/30min" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto px-8 py-3 sm:py-[18px] border border-gray-300 text-gray-700 font-semibold text-base rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 shadow-sm"
+                    className="w-full sm:w-auto px-10 py-4 sm:py-[20px] border-2 border-gray-300 text-gray-700 font-semibold text-base sm:text-lg rounded-xl hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 shadow-sm"
                   >
                     Book a 15-min Demo
                   </a>
                 </div>
-                <p className="text-sm text-gray-500 text-center lg:text-left">
+                <p className="text-sm sm:text-base text-gray-500 text-center lg:text-left mt-1">
                   No card needed · Works on all platforms
                 </p>
               </div>
